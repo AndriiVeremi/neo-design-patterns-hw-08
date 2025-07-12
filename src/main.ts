@@ -63,9 +63,8 @@ RenderEventPublisher.subscribe(summary);
 RenderEventPublisher.subscribe(perf);
 
 const content = createDocument(format);
-const renderer = RendererFactory.create(format);
-const result = renderer.wrapDocument(content);
 
-// TODO: Implement the main logic
+output ? writeFileSync(output, content) : console.log(content);
 
-output ? writeFileSync(output, result) : console.log(result);
+summary.logSummary();
+perf.logTotalTime();

@@ -4,4 +4,4 @@ export interface RenderContext {
     level?: number;
     items?: string[];
     renderTime?: number;
-} 
+}
